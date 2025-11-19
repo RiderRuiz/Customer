@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartInbox - Acceso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">SmartInbox</div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section section-alt login-section">
+    <div class="container login-box auth-box">
+      <h1>Acceso a SmartInbox</h1>
+      <p class="section-subtitle">Inicia sesion o crea tu cuenta para centralizar tu bandeja.</p>
+
+      <div class="auth-tabs">
+        <button class="tab-button active" data-tab="login">Iniciar sesion</button>
+        <button class="tab-button" data-tab="registro">Crear cuenta</button>
+      </div>
+
+      <div class="auth-forms">
+        <div class="auth-pane active" id="tab-login">
+          <form class="login-form">
+            <label class="sr-only" for="login-email">Correo</label>
+            <input id="login-email" type="email" placeholder="Correo" required />
+            <label class="sr-only" for="login-pass">Contrasena</label>
+            <input id="login-pass" type="password" placeholder="Contrasena" required />
+            <button type="submit" class="btn full">Entrar</button>
+          </form>
+          <p class="switch-text">No tienes cuenta? <a href="#registro" data-tab-target="registro">Creala aqui</a>.</p>
+        </div>
+
+        <div class="auth-pane" id="tab-registro">
+          <form class="login-form">
+            <label class="sr-only" for="reg-name">Nombre</label>
+            <input id="reg-name" type="text" placeholder="Nombre y apellidos" required />
+            <label class="sr-only" for="reg-email">Correo</label>
+            <input id="reg-email" type="email" placeholder="Correo" required />
+            <label class="sr-only" for="reg-company">Empresa</label>
+            <input id="reg-company" type="text" placeholder="Empresa (opcional)" />
+            <label class="sr-only" for="reg-pass">Contrasena</label>
+            <input id="reg-pass" type="password" placeholder="Contrasena" required />
+            <button type="submit" class="btn full">Crear cuenta</button>
+          </form>
+          <p class="switch-text">Ya tienes cuenta? <a href="#login" data-tab-target="login">Inicia sesion</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2024 SmartInbox. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="index.html#contacto">Contacto</a>
+        <a href="#">Politica de privacidad</a>
+        <a href="#">Terminos de servicio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const panes = document.querySelectorAll('.auth-pane');
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(`tab-${btn.dataset.tab}`);
+        tabButtons.forEach((b) => b.classList.toggle('active', b === btn));
+        panes.forEach((pane) => pane.classList.toggle('active', pane === target));
+      });
+    });
+
+    document.querySelectorAll('[data-tab-target]').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetKey = link.getAttribute('data-tab-target');
+        const targetBtn = Array.from(tabButtons).find((b) => b.dataset.tab === targetKey);
+        if (targetBtn) targetBtn.click();
+      });
+    });
+  </script>
+</body>
+</html>

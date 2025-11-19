@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartInbox - Centraliza. Organiza. Responde.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">SmartInbox</div>
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#ventajas">Ventajas</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#acceso" class="btn btn-outline open-auth" data-tab="login">Acceso</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="navMobile">
+    <a href="#inicio">Inicio</a>
+    <a href="#funciones">Funciones</a>
+    <a href="#ventajas">Ventajas</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#acceso" class="open-auth" data-tab="login">Acceso</a>
+  </nav>
+
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">&#8679;</button>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Centraliza. Organiza. Responde.</h1>
+        <p>
+          Gestiona toda tu bandeja de entrada en un solo lugar con una
+          interfaz moderna, rapida y pensada para equipos.
+        </p>
+        <div class="hero-actions">
+          <a href="#registro" class="btn">Comenzar ahora</a>
+          <a href="#demo" class="btn btn-outline">Ver demo</a>
+        </div>
+        <p class="hero-sub">
+          Sin compromiso &middot; Cancela cuando quieras
+        </p>
+      </div>
+      <div class="hero-illustration">
+        <div class="hero-card">
+          <h3>Panel de correos</h3>
+          <p>Prioriza mensajes importantes y reduce el ruido del dia a dia.</p>
+        </div>
+        <div class="hero-card secondary">
+          <h4>IA de Respuestas</h4>
+          <p>Genera borradores inteligentes en segundos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARACTERISTICAS PRINCIPALES -->
+  <section id="funciones" class="section">
+    <div class="container">
+      <h2>Caracter&#237;sticas principales</h2>
+      <p class="section-subtitle">
+        Descubre las funciones clave que hacen unica a SmartInbox.
+      </p>
+
+      <div class="grid features-grid">
+        <article class="card">
+          <div class="feature-icon feature-icon-lg"></div>
+          <h3>Interfaz intuitiva</h3>
+          <p>
+            Diseno limpio y simple, para que cualquier miembro del equipo
+            pueda adaptarse en minutos.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="feature-icon feature-icon-lg"></div>
+          <h3>Seguridad avanzada</h3>
+          <p>
+            Cifrado de datos y buenas practicas de seguridad para proteger
+            la informacion sensible de tu negocio.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="feature-icon feature-icon-lg"></div>
+          <h3>Sincronizaci&#243;n r&#225;pida</h3>
+          <p>
+            Accede a tus correos y conversaciones desde cualquier dispositivo
+            sin perder contexto.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="feature-icon feature-icon-lg"></div>
+          <h3>Soporte 24/7</h3>
+          <p>
+            Acompanamiento continuo para resolver dudas, incidentes y
+            mejoras en el uso de la herramienta.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="feature-icon feature-icon-lg"></div>
+          <h3>An&#225;lisis inteligente</h3>
+          <p>
+            Reportes con metricas sobre volumen de correos, tiempos de
+            respuesta y productividad del equipo.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="feature-icon feature-icon-lg"></div>
+          <h3>Personalizaci&#243;n total</h3>
+          <p>
+            Configura etiquetas, vistas y automatizaciones segun la forma
+            de trabajar de tu organizacion.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENTAJAS -->
+  <section id="ventajas" class="section section-alt">
+    <div class="container">
+      <h2>Ventajas de SmartInbox</h2>
+      <p class="section-subtitle">
+        Disena un flujo de trabajo sin ruido y con contexto completo.
+      </p>
+
+      <div class="grid advantages-grid">
+        <article class="card secondary">
+          <h3>Enfoque en lo importante</h3>
+          <p>
+            Priorizacion, recordatorios y filtros inteligentes para que nada critico se pierda.
+          </p>
+        </article>
+        <article class="card secondary">
+          <h3>Colaboracion en tiempo real</h3>
+          <p>
+            Asigna conversaciones, deja notas internas y comparte templates con tu equipo.
+          </p>
+        </article>
+        <article class="card secondary">
+          <h3>Automatizaciones</h3>
+          <p>
+            Reglas, etiquetas y respuestas rapidas para ahorrar tiempo en tareas repetitivas.
+          </p>
+        </article>
+        <article class="card secondary">
+          <h3>Integraciones</h3>
+          <p>
+            Conecta con CRM, help desk y herramientas de productividad para unificar datos.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="section">
+    <div class="container">
+      <h2>Testimonios</h2>
+      <p class="section-subtitle">Equipos reales reduciendo el caos del correo.</p>
+
+      <div class="grid testimonials">
+        <article class="card">
+          <p>
+            "Pasamos de perder hilos a tener cada respuesta en segundos. El panel es clarisimo."
+          </p>
+          <div class="testimonial-meta">
+            <strong>Laura M.</strong>
+            <span>Head of Support</span>
+          </div>
+        </article>
+        <article class="card">
+          <p>
+            "La IA nos da borradores muy buenos. Ahorra tiempo y mantiene el tono de la marca."
+          </p>
+          <div class="testimonial-meta">
+            <strong>Diego R.</strong>
+            <span>Marketing Ops</span>
+          </div>
+        </article>
+        <article class="card">
+          <p>
+            "Las automatizaciones y etiquetas compartidas nos ordenaron todo el flujo de ventas."
+          </p>
+          <div class="testimonial-meta">
+            <strong>Carla P.</strong>
+            <span>Sales Lead</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA REGISTRO -->
+  <section id="registro" class="section cta">
+    <div class="container cta-content">
+      <div class="cta-media">
+        <div class="cta-video-placeholder">
+          <span>Video demo</span>
+        </div>
+      </div>
+      <div class="cta-copy">
+        <h2>Demostraci&#243;n del producto</h2>
+        <p>
+          Descubre c&#243;mo SmartInbox revoluciona tu gesti&#243;n de correos con una demo interactiva.
+        </p>
+        <a href="#acceso" class="btn btn-light open-auth" data-tab="registro">Ver demo</a>
+      </div>
+    </div>
+    <p class="cta-sub">
+      Sin compromiso &middot; Prueba gratuita &middot; Cancelacion sencilla
+    </p>
+  </section>
+
+  <!-- MODAL ACCESO -->
+  <div id="acceso" class="auth-overlay" aria-hidden="true">
+    <div class="auth-modal">
+      <button class="auth-close" id="authClose" aria-label="Cerrar acceso">&times;</button>
+      <h2>Acceso a SmartInbox</h2>
+      <p class="section-subtitle">Inicia sesion o crea tu cuenta para centralizar tu bandeja.</p>
+
+      <div class="auth-tabs">
+        <button class="tab-button active" data-tab="login">Iniciar sesion</button>
+        <button class="tab-button" data-tab="registro">Crear cuenta</button>
+      </div>
+
+      <div class="auth-forms">
+        <div class="auth-pane active" id="tab-login">
+          <form class="login-form">
+            <label class="sr-only" for="login-email">Correo</label>
+            <input id="login-email" type="email" placeholder="Correo" required />
+            <label class="sr-only" for="login-pass">Contrasena</label>
+            <input id="login-pass" type="password" placeholder="Contrasena" required />
+            <button type="submit" class="btn full">Entrar</button>
+          </form>
+          <p class="switch-text">No tienes cuenta? <a href="#acceso" data-tab-target="registro">Creala aqui</a>.</p>
+        </div>
+
+        <div class="auth-pane" id="tab-registro">
+          <form class="login-form">
+            <label class="sr-only" for="reg-name">Nombre</label>
+            <input id="reg-name" type="text" placeholder="Nombre y apellidos" required />
+            <label class="sr-only" for="reg-email">Correo</label>
+            <input id="reg-email" type="email" placeholder="Correo" required />
+            <label class="sr-only" for="reg-company">Empresa</label>
+            <input id="reg-company" type="text" placeholder="Empresa (opcional)" />
+            <label class="sr-only" for="reg-pass">Contrasena</label>
+            <input id="reg-pass" type="password" placeholder="Contrasena" required />
+            <button type="submit" class="btn full">Crear cuenta</button>
+          </form>
+          <p class="switch-text">Ya tienes cuenta? <a href="#acceso" data-tab-target="login">Inicia sesion</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <div class="container contact-grid">
+      <div>
+        <h2>Contacto</h2>
+        <p>
+          Tienes dudas especificas o quieres ver un caso adaptado a tu equipo? Escribenos.
+        </p>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> contacto@smartinbox.com</li>
+          <li><strong>Telefono:</strong> +34 123 456 789</li>
+          <li><strong>Direccion:</strong> Calle Principal 123</li>
+        </ul>
+      </div>
+      <form class="card contact-form">
+        <h3>Envianos un mensaje</h3>
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Correo electronico" required />
+        <textarea placeholder="En que podemos ayudarte?" rows="4"></textarea>
+        <button type="submit" class="btn full">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section id="preguntas" class="section section-alt">
+    <div class="container">
+      <h2>Preguntas frecuentes</h2>
+      <p class="section-subtitle">Encuentra respuestas a las preguntas mas comunes sobre SmartInbox.</p>
+
+      <div class="faq-grid">
+        <article class="faq-card" data-faq>
+          <header>
+            <h3>Puedo usar SmartInbox con varias cuentas?</h3>
+            <span class="faq-toggle">+</span>
+          </header>
+          <p>
+            Si, puedes conectar multiples cuentas de correo y gestionarlas
+            desde un solo panel de trabajo.
+          </p>
+        </article>
+
+        <article class="faq-card" data-faq>
+          <header>
+            <h3>Necesito instalacion complicada?</h3>
+            <span class="faq-toggle">+</span>
+          </header>
+          <p>
+            No. Creas tu cuenta, conectas tus correos y comienzas a usar
+            la plataforma en la nube.
+          </p>
+        </article>
+
+        <article class="faq-card" data-faq>
+          <header>
+            <h3>Que pasa si dejo de usar el servicio?</h3>
+            <span class="faq-toggle">+</span>
+          </header>
+          <p>
+            Puedes cancelar cuando quieras. Tus datos se manejan de acuerdo
+            con nuestra politica de privacidad.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2024 SmartInbox. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="#">Politica de privacidad</a>
+        <a href="#">Terminos de servicio</a>
+      </div>
+      <div class="footer-social">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMobile = document.getElementById('navMobile');
+
+    menuToggle.addEventListener('click', () => {
+      navMobile.classList.toggle('open');
+    });
+
+    navMobile.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => navMobile.classList.remove('open'));
+    });
+
+    const authOverlay = document.getElementById('acceso');
+    const authClose = document.getElementById('authClose');
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const panes = document.querySelectorAll('.auth-pane');
+    const openAuth = document.querySelectorAll('.open-auth');
+
+    function setActiveTab(key) {
+      const target = document.getElementById(`tab-${key}`);
+      tabButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.tab === key));
+      panes.forEach((pane) => pane.classList.toggle('active', pane === target));
+    }
+
+    function openAuthModal(tab = 'login') {
+      setActiveTab(tab);
+      authOverlay.classList.add('open');
+      authOverlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+    }
+
+    function closeAuthModal() {
+      authOverlay.classList.remove('open');
+      authOverlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+
+    openAuth.forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openAuthModal(trigger.dataset.tab || 'login');
+      });
+    });
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => setActiveTab(btn.dataset.tab));
+    });
+
+    document.querySelectorAll('[data-tab-target]').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        setActiveTab(link.getAttribute('data-tab-target'));
+      });
+    });
+
+    authClose.addEventListener('click', closeAuthModal);
+    authOverlay.addEventListener('click', (e) => {
+      if (e.target === authOverlay) closeAuthModal();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && authOverlay.classList.contains('open')) {
+        closeAuthModal();
+      }
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 380) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+    backToTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Destacar enlace activo al hacer scroll
+    const navLinks = Array.from(document.querySelectorAll('.nav a, .nav-mobile a'));
+    const sections = Array.from(document.querySelectorAll('section'));
+
+    function setActiveNav(targetId) {
+      navLinks.forEach((link) => {
+        const href = link.getAttribute('href');
+        link.classList.toggle('active', href === `#${targetId}`);
+      });
+    }
+
+    function handleScroll() {
+      const offset = 140;
+      const scrollPos = window.scrollY + offset;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sec = sections[i];
+        if (scrollPos >= sec.offsetTop) {
+          setActiveNav(sec.id);
+          break;
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    // Al hacer click, cerrar men? m?vil y marcar activo
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          setActiveNav(href.replace('#', ''));
+        }
+      });
+    });
+
+    const faqCards = Array.from(document.querySelectorAll('[data-faq]'));
+    faqCards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const isActive = card.classList.contains('active');
+        faqCards.forEach((item) => item.classList.remove('active'));
+        if (!isActive) {
+          card.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
