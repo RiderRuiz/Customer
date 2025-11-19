@@ -34,7 +34,7 @@
   <button id="backToTop" class="back-to-top" aria-label="Volver arriba">&#8679;</button>
 
   <!-- HERO -->
-  <section id="inicio" class="hero">
+  <section id="inicio" class="hero hero-ribbon">
     <div class="container hero-content">
       <div class="hero-text">
         <h1>Centraliza. Organiza. Responde.</h1>
@@ -210,15 +210,35 @@
     <div class="container cta-content">
       <div class="cta-media">
         <div class="cta-video-placeholder">
-          <span>Video demo</span>
+          <div class="cta-feature">
+            <div class="cta-feature-icon">✨</div>
+            <div>
+              <h3>Interfaz intuitiva</h3>
+              <p>Dise&#241;o moderno y f&#225;cil de usar</p>
+            </div>
+          </div>
+          <div class="cta-feature">
+            <div class="cta-feature-icon">⚡</div>
+            <div>
+              <h3>Rendimiento r&#225;pido</h3>
+              <p>Optimizado para m&#225;ximo rendimiento</p>
+            </div>
+          </div>
+          <div class="cta-feature">
+            <div class="cta-feature-icon">🔒</div>
+            <div>
+              <h3>Seguridad avanzada</h3>
+              <p>Protecci&#243;n de datos garantizada</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="cta-copy">
-        <h2>Demostraci&#243;n del producto</h2>
+        <h2>Demostraci&#243;n del Producto</h2>
         <p>
           Descubre c&#243;mo SmartInbox revoluciona tu gesti&#243;n de correos con una demo interactiva.
         </p>
-        <a href="#acceso" class="btn btn-light open-auth" data-tab="registro">Ver demo</a>
+        <button class="btn btn-light video-trigger" type="button">Ver demo</button>
       </div>
     </div>
     <p class="cta-sub">
@@ -267,9 +287,25 @@
       </div>
     </div>
   </div>
+
+  <div id="videoModal" class="video-overlay" aria-hidden="true">
+    <div class="video-modal">
+      <button class="video-close" id="videoClose" aria-label="Cerrar video">&times;</button>
+      <div class="video-wrapper">
+        <iframe
+          id="videoFrame"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Demo SmartInbox"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
   
   <!-- CONTACTO -->
-  <section id="contacto" class="section">
+  <section id="contacto" class="section ribbon-band">
     <div class="container contact-grid">
       <div>
         <h2>Contacto</h2>
@@ -293,7 +329,7 @@
   </section>
 
   <!-- PREGUNTAS FRECUENTES -->
-  <section id="preguntas" class="section section-alt">
+  <section id="preguntas" class="section section-alt ribbon-band">
     <div class="container">
       <h2>Preguntas frecuentes</h2>
       <p class="section-subtitle">Encuentra respuestas a las preguntas mas comunes sobre SmartInbox.</p>
@@ -412,8 +448,13 @@
     });
 
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && authOverlay.classList.contains('open')) {
-        closeAuthModal();
+      if (e.key === 'Escape') {
+        if (authOverlay.classList.contains('open')) {
+          closeAuthModal();
+        }
+        if (videoOverlay.classList.contains('open')) {
+          closeVideo();
+        }
       }
     });
 
@@ -476,9 +517,29 @@
         }
       });
     });
+
+    const videoOverlay = document.getElementById('videoModal');
+    const videoFrame = document.getElementById('videoFrame');
+    const videoTrigger = document.querySelector('.video-trigger');
+    const videoClose = document.getElementById('videoClose');
+
+    function closeVideo() {
+      videoOverlay.classList.remove('open');
+      videoOverlay.setAttribute('aria-hidden', 'true');
+      const currentSrc = videoFrame.getAttribute('src');
+      videoFrame.setAttribute('src', currentSrc);
+    }
+
+    videoTrigger.addEventListener('click', () => {
+      videoOverlay.classList.add('open');
+      videoOverlay.setAttribute('aria-hidden', 'false');
+    });
+
+    videoClose.addEventListener('click', closeVideo);
+    videoOverlay.addEventListener('click', (e) => {
+      if (e.target === videoOverlay) closeVideo();
+    });
   </script>
 </body>
 </html>
-
-
 
